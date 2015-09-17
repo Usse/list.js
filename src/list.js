@@ -17,11 +17,11 @@ function List() {
   this.moveTo = moveTo;
   this.getElement = getElement;
   this.contains = contains;
-};
+}
 
 function append(element) {
   this.dataStore[this.listSize++] = element;
-};
+}
 
 function find(element) {
   for (var i = 0; i < this.dataStore.length; ++i) {
@@ -30,7 +30,7 @@ function find(element) {
     }
   }
   return -1;
-};
+}
 
 function remove(element) {
     var foundAt = this.find(element);
@@ -40,15 +40,15 @@ function remove(element) {
       return true;
     }
     return false;
-};
+}
 
 function length() {
   return this.listSize;
-};
+}
 
 function toString() {
   return this.dataStore;
-};
+}
 
 function insert(element, after) {
     var insertPos = this.find(after);
@@ -58,13 +58,13 @@ function insert(element, after) {
       return true;
     }
     return false;
-};
+}
 
 function clear() {
   delete this.dataStore;
   this.dataStore = [];
   this.listSize = this.pos = 0;
-};
+}
 
 function contains(element) {
   for (var i = 0; i < this.dataStore.length; ++i) {
@@ -73,7 +73,7 @@ function contains(element) {
       }
   }
   return false;
-};
+}
 
 function front() {
   this.pos = 0;
